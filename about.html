@@ -1,0 +1,250 @@
+     <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the beauty of Murree with accurate info on hotels, restaurants, and attractions." />
+  <title>About Us | Murree Getaway</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .back-btn {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1001;
+      padding: 6px 12px;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #666;
+    }
+
+    .hamburger {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+      cursor: pointer;
+      padding: 10px;
+      background-color: transparent;
+    }
+
+    .bar {
+      width: 30px;
+      height: 3px;
+      margin: 5px auto;
+      background-color: white;
+      transition: 0.3s ease-in-out;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(135deg);
+    }
+
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      background-color: #111;
+      transition: top 0.4s ease;
+      z-index: 999;
+      padding: 30px 0;
+    }
+
+    .navbar.active {
+      top: 0;
+    }
+
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .navbar ul li {
+      margin: 10px 0;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .social ul {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .social img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .about-text {
+      padding: 20px;
+      max-width: 900px;
+      margin: 100px auto 40px auto;
+      color: white;
+      text-align: center;
+    }
+
+    .about-text h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    #head {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-top: 40px;
+    }
+
+    .content .btn {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .content .btn button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #000;
+      color: white;
+      border: 1px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .content .btn button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f0f0f0;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="index.html" class="back-btn" aria-label="Back to Home">← Home</a>
+
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" role="button">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <nav class="navbar" role="navigation" aria-label="Main menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#kitchen">Kitchen</a></li>
+      <li><a href="index.html#rooms">Rooms</a></li>
+      <li><a href="index.html#contact">Contact Us</a></li>
+    </ul>
+    <div class="social">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/share/15mwZ8qpW2/?mibextid=wwXIfr" target="_blank">
+            <img src="socials/fb.png" alt="Visit our Facebook page">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/azib._5/" target="_blank">
+            <img src="socials/ig.png" alt="Follow Azib on Instagram">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/_muhammad_abbasi/" target="_blank">
+            <img src="socials/ig.png" alt="Follow Abbasi on Instagram">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="about-text">
+    <h1>Welcome to Murree Getaway</h1>
+    <p>
+      Your comprehensive guide to discovering the best of Murree. We're passionate about showcasing the beauty and unique experiences this charming hill station has to offer.
+    </p>
+    <p>
+      Our platform provides accurate, up-to-date information on Murree's hotels, restaurants, and attractions, ensuring you make the most of your visit. We connect you with local businesses and hidden gems, empowering you to create unforgettable memories.
+    </p>
+    <p>
+      Whether you're planning a relaxing getaway or an adventurous exploration, Murree Getaway is your trusted partner in navigating the wonders of Murree.
+    </p>
+  </main>
+
+  <div id="head">Our Brief History</div>
+
+  <div class="content">
+    <div class="btn">
+      <a href="index.html#contact">
+        <button aria-label="Go to Contact Section">Contact Us</button>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; Murree Getaway. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const hamburger = document.querySelector('.hamburger');
+      const navbar = document.querySelector('.navbar');
+      hamburger.classList.toggle('active');
+      navbar.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>
